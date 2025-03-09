@@ -1,0 +1,17 @@
+trigger:
+  branches:
+    include:
+      - main
+
+jobs:
+  - job: RunIntegrationTests
+    pool:
+      vmImage: "ubuntu-latest"
+    steps:
+      - task: UsePythonVersion@1
+        inputs:
+          versionSpec: "3.x"
+      - script: |
+          pip install -r requirements.txt
+          pytest tests/integration_tests/
+        displayName: "Run Integration Tests"
