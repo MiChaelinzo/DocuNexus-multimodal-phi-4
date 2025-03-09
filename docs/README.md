@@ -2,8 +2,6 @@
 
 **Your Intelligent Document & Media Workflow Agent Powered by Azure & Phi-4**
 
-![DocuNexus AGI-Agent Logo (Placeholder - Replace with actual logo)](docs/docunexus_logo.png)
-
 ## Overview
 
 DocuNexus AGI-Agent is a cutting-edge application leveraging **Azure AI** to revolutionize how users interact with documents and media. Built on the secure and robust **Microsoft Azure** platform and powered by the advanced **Phi-4-multimodal-instruct** model, DocuNexus AGI offers a comprehensive suite of intelligent features designed to enhance productivity, provide valuable insights, and automate labor-intensive workflows.
