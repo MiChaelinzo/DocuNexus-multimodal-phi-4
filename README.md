@@ -2,7 +2,7 @@
 
 **Your Intelligent Document & Media Workflow Agent Powered by Azure & Phi-4**
 
-![DocuNexus AGI-Agent Logo]([docs/docunexus_logo.png](https://i.imgur.com/530DGSL.png))
+![DocuNexus AGI-Agent Logo](https://i.imgur.com/530DGSL.png)
 
 ## Overview
 
