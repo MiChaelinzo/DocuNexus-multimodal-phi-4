@@ -22,17 +22,17 @@ class AGIEngine:
         """Processes text-based requests using the AGI model."""
         logger.info(f"Processing text request: {prompt[:50]}...") # Log only first 50 chars
 
-        # 1. Select Model (Phi-4 or  based on use_phi4 flag or default logic)
+        # 1. Select Model (Phi-4 or Phi-4-multimodal-instruct based on use_phi4 flag or default logic)
         model = self.model_manager.get_model(use_phi4=use_phi4)
         model_name = self.model_manager.get_model_name(use_phi4=use_phi4)  # Get model name
 
         # 2. Generate Prompt using Prompt Templates (based on task type)
         full_prompt = self.prompt_templates.create_prompt("document_analysis", prompt, context=context_documents) # Example template
 
-        # 3. Call Azure AI Inference (or ) Model for Response Generation
+        # 3. Call Azure AI Inference (or Phi-4-multimodal-instruct) Model for Response Generation
         try:
             logger.info(f"Calling AI model: {model_name}") # Log model call
-            ai_response = model.generate_content(contents=full_prompt) #  Using GenerativeModel interface (for both /Phi-4)
+            ai_response = model.generate_content(contents=full_prompt) #  Using GenerativeModel interface (for both Phi-4-multimodal-instruct/Phi-4)
             response_text = ai_response.text # Assuming consistent response structure
             logger.info(f"AI response received (first 100 chars): {response_text[:100]}...")
 
@@ -47,7 +47,7 @@ class AGIEngine:
 
 
     def process_vision_request(self, prompt, image_data):
-        """Processes vision-based requests using the Vision AGI model ( Vision in this example)."""
+        """Processes vision-based requests using the Vision AGI model (Phi-4-multimodal-instruct Vision in this example)."""
         logger.info("Processing vision request...")
 
         vision_model = self.model_manager.get_vision_model() # Assumes ModelManager handles vision model retrieval
@@ -62,7 +62,7 @@ class AGIEngine:
         ]
 
         try:
-            logger.info("Calling Vision AI model ( Vision)")
+            logger.info("Calling Vision AI model (Phi-4-multimodal-instruct Vision)")
             ai_response = vision_model.generate_content(contents=contents) # Call vision model
             response_text = ai_response.text
             logger.info(f"Vision AI response received (first 100 chars): {response_text[:100]}...")
