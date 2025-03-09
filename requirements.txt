@@ -1,0 +1,49 @@
+# Streamlit (Web Framework)
+streamlit==1.20.0
+streamlit-webrtc==0.45.0
+
+# Azure OpenAI (AI Model Inference)
+azure-ai-openai==0.1.0
+
+# Azure Cognitive Services
+azure-cognitiveservices-vision-computervision==0.7.0
+azure-cognitiveservices-speech==1.24.0
+azure-storage-blob==12.15.0  # For Azure Blob Storage
+
+# Media and Image Processing
+Pillow==9.5.0  # For image handling
+av==10.0.0  # For video frame processing
+pydub==0.25.1  # For audio manipulation
+moviepy==1.0.3  # For video processing
+
+# Audio and Speech Processing
+SpeechRecognition==3.8.1  # For speech-to-text
+audiorecorder==0.1.3  # For audio recording in Streamlit
+
+# Document Handling
+python-docx==0.8.11  # For .docx file parsing
+reportlab==3.6.14  # For PDF generation
+
+# Data Analytics and External Integration
+snowflake-connector-python==2.7.12  # For Snowflake integration
+pandas==2.0.1  # Data manipulation and analysis
+numpy==1.24.3  # Numerical computing
+matplotlib==3.7.1  # Plotting and visualization
+
+# Azure Specific Tools
+azure-keyvault-secrets==4.5.0  # For secure key management
+azure-monitor-opentelemetry-exporter==1.0.0b15  # For Azure Monitor integration
+
+# Utilities
+requests==2.28.2  # For HTTP requests
+unittest2==1.1.0  # For unit and integration testing
+pytest==7.3.1  # For advanced testing
+
+# Temporary File Handling
+mss==7.0.1  # For screen capturing (optional if you need screen-sharing)
+
+# Miscellaneous
+PyPDF2==3.0.1  # For PDF parsing
+io==1.0.0  # For handling input and output in Python (preinstalled)
+base64  # Already included in Python standard library
+tempfile  # Already included in Python standard library
